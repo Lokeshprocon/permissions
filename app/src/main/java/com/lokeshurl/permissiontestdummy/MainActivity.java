@@ -26,10 +26,10 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
     }
 
     @Override
-    public void permissionGranted(String permission) {
-        if (permission.equals(Manifest.permission.ACCESS_FINE_LOCATION), 10)
+    public void permissionGranted(String permission, int requestCode) {
+        if (permission.equals(Manifest.permission.ACCESS_FINE_LOCATION) && requestCode == 10 )
             Toast.makeText(this, "Location permission granted", Toast.LENGTH_SHORT).show();
-        if (permission.equals(Manifest.permission.READ_CONTACTS), 20)
+        if (permission.equals(Manifest.permission.READ_CONTACTS), && requestCode == 20)
             Toast.makeText(this, "Contact read permission granted", Toast.LENGTH_SHORT).show();
     }
 
